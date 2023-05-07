@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Passanger Counter</title>
+        <link rel="icon" type="image/png" href="src\favicon_io\favicon-32x32.png">
+        <link rel="stylesheet" href="passengerCounter.css"/>
+        <!-- Latest compiled and minified CSS -->
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <!-- Add jQuery library -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <!-- Add Popper.js library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Add Bootstrap 4 JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    </head>
+    <body>
+        <div id="video-background-container">
+            <div class="video-overlay"></div> <!-- Add this line -->
+            <video autoplay muted loop id="video-background">
+                <source src="src\pexels-pixabay-855749-1920x1080-60fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="container train">
+            <h1 id="movingTrain">&#128642;</h1>
+        </div>
+        <!-- Your content goes here &#128642; -->
+        <div class="container content">
+            <div class="row">
+                <div class="col-md colbcg"> <!-- First column -->
+                    <h1>People entered</h1>
+                    <h2 id="count-el">0</h2>
+                </div>
+                <div class="col-md colbcg"> <!-- Second column -->
+                    <div class="buttons-container">
+                        <button type="button" class="btn btn-success" onclick="increament()">Increament</button>
+                        <button type="button" class="btn btn-danger" onclick="saveIt()">Save</button>
+                        <button type="button" class="btn btn-warning" onclick="reset()">Reset</button>
+                    </div>
+                </div>
+                <div class="col-md colbcg"> <!-- Third column -->
+                    <h2 id="finalCount-el"></h2>
+                    <script src="passengerCounter.js"></script>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
